@@ -1,0 +1,45 @@
+// Print A Pascal's Triangle Of A Given Height In C++ Language :-
+
+// Here Is CODE :-
+
+#include <iostream>
+using namespace std;
+
+int main() {
+  
+  int n;
+  cout << "Enter The Positive Number : ";
+  cin >> n;
+
+  while(n <= 0){
+    cout << "Please Enter The Positive Number." << endl;
+    cin >> n;
+  }
+
+  // Print Row (i);
+  int i = 0;
+  while(i < n){
+    int space = n - i - 1;
+    int value = 1;
+
+    // Print Spaces;
+    while(space){
+      cout << " ";
+      space--;
+    }
+
+    // Print Column (j);
+    int j = 0;
+    while(j <= i){
+      cout << value << " ";
+      value = value * (i - j) / (j + 1);
+      j++;
+    }
+
+    cout << endl;
+    i++;
+  
+  }
+  
+  return 0;
+}
