@@ -1,0 +1,35 @@
+// Generate Pascal's Triangle Of A Given Height Using Nested For Loops.
+
+//Here Is CODE :-
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    
+    int n;
+    cout << "Enter The Positive Number : ";
+    cin >> n;
+
+    while(n <= 0){
+        cout << "Please Enter The Positive Number." << endl;
+        cin >> n;
+    }
+    
+    for(int i = 0; i < n; i++){
+        
+        for(int space = 1; space <= n - i - 1; space++){
+            cout << " ";
+        }
+        
+        int value = 1;
+        for(int j = 0; j <= i; j++){
+            cout << value << " ";
+            value = value * (i - j) / (j + 1);
+        }
+        
+        cout << endl;
+    }
+    
+    return 0;
+}
