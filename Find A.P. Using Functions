@@ -1,0 +1,22 @@
+// A.P. For 3 * n + 7 Using Functions In C++
+
+// CODE Is Here
+
+#include<iostream>
+
+using namespace std;
+
+void calculateAP(int n){
+    int ap = 3 * n + 7;
+    cout << "AP For " << n << " Is " << ap << endl;
+} 
+
+int main(){
+    
+    int n;
+    cin >> n;
+    
+    calculateAP(n);
+    
+    return 0;
+}
