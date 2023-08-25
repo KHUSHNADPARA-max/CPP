@@ -6,46 +6,52 @@
 
 using namespace std;
 
-int main()
-{
-    
+int main() {
     int a, b;
     
-    cout << "Enter the value of A : ";
+    cout << "Enter the value of a: ";
     cin >> a;
     
-    cout << "Enter the value of B : ";
+    cout << "Enter the value of b: ";
     cin >> b;
     
     char op;
-    cout << "Enter the operation you want to perform : ";
+    cout << "Please enter the arithmetic operator (+, -, *, /, %): ";
     cin >> op;
     
-    switch(op){
+    switch (op) {
         case '+':
-            cout << (a + b) << endl;
+            cout << a << " + " << b << " = " << (a + b) << endl;
             break;
-            
+        
         case '-':
-            cout << (a - b) << endl;
+            cout << a << " - " << b << " = " << (a - b) << endl;
             break;
             
         case '*':
-            cout << (a * b) << endl;
+            cout << a << " * " << b << " = " << (a * b) << endl;
             break;
             
         case '/':
-            cout << (a / b) << endl;
+            if (b != 0) {
+                cout << a << " / " << b << " = " << (a / b) << endl;
+            } else {
+                cout << "Cannot divide by zero." << endl;
+            }
             break;
             
         case '%':
-            cout << (a % b) << endl;
+            if (b != 0) {
+                cout << a << " % " << b << " = " << (a % b) << endl;
+            } else {
+                cout << "Cannot calculate remainder for division by zero." << endl;
+            }
             break;
-            
+        
         default:
-            cout << "Please Enter A Valid Operation : " << endl;
+            cout << "Invalid input. Please enter a valid operator." << endl;
+            break;
     }
-    
-    
+
     return 0;
 }
