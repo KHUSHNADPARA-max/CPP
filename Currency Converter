@@ -1,0 +1,53 @@
+// Question : Currency Converter: Build a currency converter program that takes an amount in a certain currency and a conversion option as input 
+              (e.g., USD to INR, EUR to JPY) using a switch-case statement to perform the conversion based on predefined exchange rates.
+
+// CODE Is Here
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    double amount;
+    int conversionOption;
+
+    cout << "Enter The Amount : ";
+    cin >> amount;
+
+    cout << "Select conversion option:" << endl;
+    cout << "1. USD To INR" << endl;
+    cout << "2. EUR To JPY" << endl;
+    cout << "3. INR To USD" << endl;
+    cout << "4. JPY To EUR" << endl;
+    cout << "5. Quit" << endl;
+    cout << "Option: ";
+    cin >> conversionOption;
+
+    double convertedAmount;
+
+    switch (conversionOption) {
+        case 1:
+            convertedAmount = amount * 82.66; // USD to INR conversion rate
+            cout << amount << " USD is equivalent to " << convertedAmount << " INR" << endl;
+            break;
+        case 2:
+            convertedAmount = amount * 130.0; // EUR to JPY conversion rate
+            cout << amount << " EUR is equivalent to " << convertedAmount << " JPY" << endl;
+            break;
+        case 3:
+            convertedAmount = amount * 0.012; // INR to USD conversion rate
+            cout << amount << " INR is equivalent to " << convertedAmount << " USD" << endl;
+            break;
+        case 4:
+            convertedAmount = amount / 130.0; // JPY to EUR conversion rate
+            cout << amount << " JPY is equivalent to " << convertedAmount << " EUR" << endl;
+            break;
+        case 5:
+            cout << "Quitting the program." << endl;
+            break;
+        default:
+            cout << "Invalid option selected." << endl;
+            break;
+    }
+
+    return 0;
+}
