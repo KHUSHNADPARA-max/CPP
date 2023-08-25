@@ -1,0 +1,23 @@
+// Print Even Numbers Using Functions In CPP
+
+// CODE Is Here
+
+#include <iostream>
+
+void printEvenNumbers(int n) {
+    for (int i = 2; i <= n; i += 2) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+}
+
+int main() {
+    int num;
+    std::cout << "Enter an integer: ";
+    std::cin >> num;
+
+    std::cout << "Even numbers from 1 to " << num << ": ";
+    printEvenNumbers(num);
+
+    return 0;
+}
