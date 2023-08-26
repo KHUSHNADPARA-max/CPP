@@ -1,0 +1,27 @@
+// Factorial Number Using Functions In CPP
+
+// CODE Is Here
+
+#include<iostream>
+
+using namespace std;
+
+int factorial(int num){
+    int fact = 1;
+    for(int i = 1; i <= num; i++){
+        fact *= i;
+    }
+    return fact;
+}
+
+int main(){
+    
+    int num;
+    cout << "Enter The Positive Number : ";
+    cin >> num;
+    
+    int ans = factorial(num);
+    cout << "Your Factorial Value Is : " << ans << endl;
+    
+    return 0;
+}
