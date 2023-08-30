@@ -1,0 +1,42 @@
+// Swap Alternate In Array Without Using Swap(In-Built) Functions
+
+// CODE Is Here
+
+#include <iostream>
+
+using namespace std;
+
+void printArrays(int arr[], int n){
+    
+    for(int i = 0; i < n; i++){
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+void swapAlternate(int arr[], int size){
+    
+    for(int i = 0; i < size; i += 2){
+        if(i + 1 < size){
+            int temp = arr[i + 1];
+            arr[i + 1] = arr[i];
+            arr[i] = temp;
+        }
+    }
+    
+}
+
+int main()
+{
+    
+    int even[8] = {10, 13, 6, 97, 46, 52, 41, 34};
+    int odd[5] = {23, 45, 67, 49, 33};
+    
+    swapAlternate(even, 8);
+    printArrays(even, 8);
+    
+    swapAlternate(odd, 5);
+    printArrays(odd, 5);
+
+    return 0;
+}
