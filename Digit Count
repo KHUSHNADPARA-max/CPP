@@ -1,0 +1,26 @@
+//Count The Number Of Digit In CPP;
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    
+    int digitCount = 0;
+    
+    if(n == 0)
+    {
+        cout << 1;
+    }
+    else{
+        for(int num = n; num > 0; num /= 10)
+        {
+            digitCount++;
+        }
+        cout << digitCount;
+    }
+    
+    return 0;
+}
