@@ -1,0 +1,16 @@
+//Sum Of Digits In CPP;
+
+//GFG Question
+
+class Solution{
+public:
+    int sumOfDigits(int N){
+        //code here;
+        int digit_sum = 0;
+        for(int num = N; num > 0; num /= 10)
+        {
+            digit_sum += (num % 10);
+        }
+        return digit_sum;
+    }
+};
