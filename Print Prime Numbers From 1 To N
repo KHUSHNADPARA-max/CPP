@@ -1,0 +1,46 @@
+// Print Prime Numbers From 1 To N In CPP
+
+===============================CODE==================================
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout << "Enter The Number : ";
+    cin >> n;
+    
+    for(int num = 1; num <= n; num++)
+    {
+        cout << "This Number " << num << " is ";
+        
+        if(num <= 1)
+        {
+            cout << "Not Prime." << endl;
+        }
+        else
+        {
+            int flag = 0;
+            for(int i = 2; i <= num - 1; i++)
+            {
+                if(num % i == 0)
+                {
+                    flag = 1;
+                    break;
+                }
+            }
+            if(flag == 0)
+            {
+                cout << "Prime." << endl;
+            }
+            else
+            {
+                cout << "Not Prime." << endl;
+            }
+        }
+        
+    }
+    
+    return 0;
+}
