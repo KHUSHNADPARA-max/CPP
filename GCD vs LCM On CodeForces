@@ -3,25 +3,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool IsPrime(int n) {
-	if (n < 2)
-		return false;
-	for (int i = 2; i * i <= n; i++)
-		if (n % i == 0)
-			return false;
-	return true;
-}
+// GCD vs LCM Codeforces
+// For a=n-3,b=1,c=1 and d=1, we can see that a+b+c+d=n and gcd(a,b)=lcm(c,d)=1
 
 int main() {
 	int t;
-	cin >> t;
-	while (t--) {
-		int n;
-		cin >> n;
-		if (n != 1 && IsPrime(n + 1))
-			cout << "NO\n";
-		else
-			cout << "YES\n";
-	}
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        cout << n - 3 << ' ' << 1 << ' ' << 1 << ' ' << 1 <<endl;
+    }
 	return 0;
 }
