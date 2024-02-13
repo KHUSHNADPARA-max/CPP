@@ -1,0 +1,27 @@
+// Write a C++ program to print Fibonacci series up to n terms using loop In CPP;
+
+===================================CODE========================================
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int first, second, nth, term;
+    
+    cout << "Enter The Terms : ";
+    cin >> term;
+    
+    first = 0; second = 1; nth = 0;
+    
+    for(int i = 1; i <= term; i++)
+    {
+        cout << nth << ", ";
+        
+        first = second; //Copy n - 1 To n - 2;
+        second = nth;   //Copy Current To n - 1;
+        nth = first + second;   //New Term;
+    }
+
+    return 0;
+}
