@@ -1,0 +1,27 @@
+// Write a C++ program to find power of a number using for loop in CPP. 
+
+===========================CODE==================================
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int base, expo;
+    long long power = 1;
+    
+    cout << "Enter Base : ";
+    cin >> base;
+    
+    cout << "Enter Expo : ";
+    cin >> expo;
+    
+    for(int i = 1; i <= expo; i++)
+    {
+        power *= base;
+    }
+    
+    cout << base  << "^" << expo << "=" << power << endl;
+
+    return 0;
+}
