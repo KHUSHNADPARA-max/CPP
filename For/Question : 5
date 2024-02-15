@@ -1,0 +1,38 @@
+// LCM of two Numbers; Write a C++ program to input two numbers from user and find LCM (Lowest Common Multiple).
+
+====================================================CODE========================================================
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i, num1, num2, lcm = 1, max;
+    
+    cout << "Enter The Num1 : ";
+    cin >> num1;
+    
+    cout << "Enter The Num2 : ";
+    cin >> num2;
+    
+    if(num1 > num2)
+        max = num1;
+    else
+        max = num2;
+        
+    i = max;
+    
+    while(1)
+    {
+        if((i % num1 == 0) && (i % num2 == 0))
+        {
+            lcm = i;
+            break;
+        }
+        i += max;
+    }
+    
+    cout << "LCM = " << lcm;
+
+    return 0;
+}
